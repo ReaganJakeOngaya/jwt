@@ -1,14 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar'; // Import Navbar
-import Home from './pages/Home'; // Import Home component
+import Navbar from './components/Navbar';
+import Home from './pages/Home'; 
+import ScrollToTopButton from './components/ScrollToTopButton';
+import ChatbotButton from './components/ChatBotButton';
 
 function App() {
   return (
     <Router>
-      {/* Navbar is now inside Router */}
       <Navbar />
+      <ScrollToTopButton />
+      <ChatbotButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<div>Page Not Found</div>} />
@@ -19,15 +22,3 @@ function App() {
 
 export default App;
 
-
-// import React from 'react';
-
-// const Home = () => {
-//   return (
-//     <div>
-//       <h1>Welcome to the Home Page</h1>
-//     </div>
-//   );
-// };
-
-// export default Home;
